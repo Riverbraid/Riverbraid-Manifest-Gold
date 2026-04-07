@@ -1,20 +1,6 @@
-[
-  {
-    "file": "GENESIS.md"
-  },
-  {
-    "file": "CLUSTER_CLUSTER_README.md"
-  },
-  {
-    "file": "SPEC.md"
-  },
-  {
-    "file": "TRUTH.md"
-  },
-  {
-    "file": "run-vectors.cjs"
-  },
-  {
-    "file": "swarm_anchor.txt"
-  }
-]
+{
+  "name": "riverbraid-manifest-gold",
+  "version": "1.5.0",
+  "timestamp": "2026-04-07T23:46:07.806Z",
+  "sha256": "3846bab3bbfd998777836b5dbfd8b71956e3abfcdd698702052f7386923c858d"
+}
