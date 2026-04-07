@@ -1,0 +1,48 @@
+{
+  "version": "1.5.0",
+  "timestamp": "2026-04-07T08:33:58.329Z",
+  "agents": {
+    "Riverbraid-Action-Gold": {
+      "signature_hash": "ee4d2fc2d3e2c57f15ca907f869f857fc719cc30c8927150ec6c004e59ad5161"
+    },
+    "Riverbraid-Audio-Gold": {
+      "signature_hash": "ee4d2fc2d3e2c57f15ca907f869f857fc719cc30c8927150ec6c004e59ad5161"
+    },
+    "Riverbraid-Crypto-Gold": {
+      "signature_hash": "eca2c16691e0f2847493e0373e199c1fd477e66b2d2f647b85735e5aede9d946"
+    },
+    "Riverbraid-GPG-Gold": {
+      "signature_hash": "901e9ebc2ce502e4032cc9a0ffa021c5be2654b202fbdc787b105846de735102"
+    },
+    "Riverbraid-Harness-Gold": {
+      "signature_hash": "782328cf76050d1acedc53f366817ca027f8d0d06f814e2ba9dfaa088c117599"
+    },
+    "Riverbraid-Integration-Gold": {
+      "signature_hash": "0810401e261f379dc9da47ce4e25c628ebbb2003558a3051f121c99742c35f6a"
+    },
+    "Riverbraid-Interface-Gold": {
+      "signature_hash": "01f8b2b1a829217fb82973a5e8024e92baad823197f515c8488028781f1a558d"
+    },
+    "Riverbraid-Judicial-Gold": {
+      "signature_hash": "42005ff927e1d87fed05087bd52d2b2068eab1533618c85b19d1d4155e92fb98"
+    },
+    "Riverbraid-Manifest-Gold": {
+      "signature_hash": "f44866a90a71a29a770da891fc6d8ac9e74c722425309ec9b810ee9c3e52d4e7"
+    },
+    "Riverbraid-Memory-Gold": {
+      "signature_hash": "8c35cb749dffb4fef1782a8251feb7ffe68a35339ccbbe5e78f175670666a5fb"
+    },
+    "Riverbraid-Refusal-Gold": {
+      "signature_hash": "1c9e946969cddb40510a3c3fa5f9e91f46205adc2bb4e4fbb495114073bc7e4d"
+    },
+    "Riverbraid-Safety-Gold": {
+      "signature_hash": "8817aaffdacb0efa9e1c3c188b53b60701f112c2e4068da0203857a1f1971bdb"
+    },
+    "Riverbraid-Temporal-Gold": {
+      "signature_hash": "ee4d2fc2d3e2c57f15ca907f869f857fc719cc30c8927150ec6c004e59ad5161"
+    },
+    "Riverbraid-Vision-Gold": {
+      "signature_hash": "c4eb23a7b33ebe73cf374e57086a4a3f354e7f31dfd614edc82c4df8efe990a8"
+    }
+  }
+}

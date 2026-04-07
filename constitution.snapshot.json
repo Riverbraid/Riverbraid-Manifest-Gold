@@ -1,0 +1,20 @@
+[
+  {
+    "file": "GENESIS.md"
+  },
+  {
+    "file": "README.md"
+  },
+  {
+    "file": "SPEC.md"
+  },
+  {
+    "file": "TRUTH.md"
+  },
+  {
+    "file": "run-vectors.cjs"
+  },
+  {
+    "file": "swarm_anchor.txt"
+  }
+]
