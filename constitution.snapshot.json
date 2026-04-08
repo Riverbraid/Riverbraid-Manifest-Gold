@@ -1,56 +1,6 @@
-[
-  {
-    "file": ".anchor"
-  },
-  {
-    "file": ".gitignore"
-  },
-  {
-    "file": "PROOFS/v1.5.0_resonance_proof.json.asc"
-  },
-  {
-    "file": "README.md"
-  },
-  {
-    "file": "bin/gate.mjs"
-  },
-  {
-    "file": "bin/heartbeat.mjs"
-  },
-  {
-    "file": "bin/run-vectors.cjs"
-  },
-  {
-    "file": "constitutional/DURABILITY.md"
-  },
-  {
-    "file": "constitutional/LAYER-INVARIANTS.md"
-  },
-  {
-    "file": "constitutional/NEUTRAL-LAYERS.md"
-  },
-  {
-    "file": "constitutional/RESILIENCE.md"
-  },
-  {
-    "file": "constitutional/SCOPE.md"
-  },
-  {
-    "file": "constitutional/SEAL-RECORD.md"
-  },
-  {
-    "file": "constitutional/SURVIVABILITY.md"
-  },
-  {
-    "file": "gate.mjs"
-  },
-  {
-    "file": "heartbeat.mjs"
-  },
-  {
-    "file": "run-vectors.cjs"
-  },
-  {
-    "file": "swarm_anchor.txt"
-  }
-]
+{
+  "name": "riverbraid-manifest-gold",
+  "version": "1.5.0",
+  "timestamp": "2026-04-08T00:05:18.491Z",
+  "sha256": "3650695b78053cb37808f76e48f3dbdd0052a91baf49179218e181d2e11fb05c"
+}
