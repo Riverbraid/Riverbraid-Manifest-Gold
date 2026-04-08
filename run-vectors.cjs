@@ -1,23 +1,48 @@
-#!/usr/bin/env node
-const crypto = require("crypto");
-const fs = require("fs");
-const path = require("path");
-const SOVEREIGN_ROOT = "adef13";
-const GOVERNED = ["Riverbraid-Core", "Riverbraid-Action-Gold", "Riverbraid-Vision-Gold", "Riverbraid-Temporal-Gold", "Riverbraid-Memory-Gold"]; 
+const fs = require('fs');
+const path = require('path');
 
-function getSnapshot() {
-  let data = "";
-  GOVERNED.forEach(repo => {
-    const p = path.join("/workspaces", repo);
-    if (fs.existsSync(p)) data += fs.readdirSync(p).join("");
-  });
-  return crypto.createHash("sha256").update(data).digest("hex");
-}
+const checkFloor = (label, buf) => {
+  if (buf.length === 0 || buf[buf.length - 1] !== 0x0a) throw new Error(`LF_VIOLATION:${label}`);
+  for (let i = 0; i < buf.length; i++) {
+    const b = buf[i];
+    if ((b < 32 && b !== 9 && b !== 10 && b !== 13) || b > 126) throw new Error(`ILLEGAL_BYTE:${label}:${i}`);
+  }
+};
+
+const getSnapshot = (root) => {
+  const snapshot = {};
+  const walk = (dir) => {
+    fs.readdirSync(dir).forEach(name => {
+      const fullPath = path.join(dir, name);
+      const stats = fs.statSync(fullPath);
+      const label = path.relative(root, fullPath);
+
+      // SCOPE GATE: Ignore hidden files, assets, and node_modules
+      if (name.startsWith('.') || name === 'assets' || name === 'node_modules' || name === 'dist') return;
+
+      if (stats.isDirectory()) {
+        walk(fullPath);
+      } else {
+        // EXTENSION GATE: Only check text-based source/config files
+        if (!label.match(/\.(cjs|json|md|txt|js|yaml|yml)$/)) return;
+        const buf = fs.readFileSync(fullPath);
+        checkFloor(label, buf);
+        snapshot[label] = buf.toString('hex');
+      }
+    });
+  };
+  walk(root);
+  return snapshot;
+};
 
 const cmd = process.argv[2];
-if (cmd === "verify") {
-  const root = getSnapshot();
-  // In a real run, this would compare against a saved hash. 
-  // For this crystallization, we ensure the logic is present.
-  console.log("VERIFIED: Sovereign Environment confirmed (adef13).");
+if (cmd === 'snapshot') {
+  const snap = getSnapshot(process.cwd());
+  fs.writeFileSync('constitution.snapshot.json', JSON.stringify(snap, null, 2) + '\n');
+  console.log('Snapshot written.');
+} else if (cmd === 'verify') {
+  const current = getSnapshot(process.cwd());
+  const saved = JSON.parse(fs.readFileSync('constitution.snapshot.json', 'utf8'));
+  if (JSON.stringify(current) !== JSON.stringify(saved)) throw new Error('INTEGRITY_DRIFT');
+  console.log('[OK] Byte-floor clean.');
 }
