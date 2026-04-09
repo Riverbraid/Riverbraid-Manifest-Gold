@@ -1,0 +1,10 @@
+[
+  {
+    "deployment_name": "Riverbraid Reference Instance #1",
+    "sovereign_root": "fa7475",
+    "anchor_type": "Bitcoin (OpenTimestamps)",
+    "anchor_proof": "docs/anchor/anchor.txt.ots",
+    "verification_status": "Verified",
+    "last_audit": "2026-04-08"
+  }
+]
