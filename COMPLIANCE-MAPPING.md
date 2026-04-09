@@ -1,9 +1,10 @@
-# Riverbraid v1.5.0 Compliance Alignment
+# Riverbraid v1.5.0 Compliance Alignment (Mechanical Only)
 
-| Control Objective | Riverbraid Mechanism | Proof Artifact |
-| :--- | :--- | :--- |
-| **Integrity Protection** | Merkle Tree Root Hash | `cluster-root.txt` |
-| **Change Management** | Deterministic Commit Scoping | `swarm.manifest.json` |
-| **Governance Authorization** | Threshold Digital Signatures | `attestation/` |
-| **Proof of Existence** | Bitcoin Blockchain Anchoring | `anchor/anchor.txt.ots` |
-| **Auditability** | Full Supply Chain SBOM | `attestation/sbom.canonical.json` |
+| Objective                  | Riverbraid Mechanism              | Proof Artifact                  |
+|----------------------------|-----------------------------------|---------------------------------|
+| Integrity & Auditability   | Merkle root + swarm manifest      | cluster-root.txt + swarm.manifest.json |
+| Change control             | Deterministic canonicalization    | run-vectors.cjs + .gitattributes |
+| Tamper evidence            | Fail-closed + Bitcoin anchor      | anchor/anchor.txt.ots + Shield logs |
+| Reproducibility            | Clean-room rebuild schedule       | REBUILD-SCHEDULE.md             |
+
+No certification is claimed. All proofs are public and independently verifiable.
