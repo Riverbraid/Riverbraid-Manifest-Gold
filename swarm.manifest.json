@@ -1,48 +1,61 @@
 {
   "version": "1.5.0",
-  "timestamp": "2026-04-07T08:33:58.329Z",
   "agents": {
     "Riverbraid-Action-Gold": {
-      "signature_hash": "ee4d2fc2d3e2c57f15ca907f869f857fc719cc30c8927150ec6c004e59ad5161"
+      "signature_hash": "9a054758428aaeb5abeb93a7b92a477287b5f31402aa7768ff22c56aa8b5d792",
+      "status": "VERIFIED"
     },
     "Riverbraid-Audio-Gold": {
-      "signature_hash": "ee4d2fc2d3e2c57f15ca907f869f857fc719cc30c8927150ec6c004e59ad5161"
+      "signature_hash": "5fe1eb0d788568c3d4e8f1995709ef0874bf7b79e6c47043d55d16de4e26cb15",
+      "status": "VERIFIED"
     },
     "Riverbraid-Crypto-Gold": {
-      "signature_hash": "eca2c16691e0f2847493e0373e199c1fd477e66b2d2f647b85735e5aede9d946"
+      "signature_hash": "0f7e49230939c60dc72591891ffe45ae72e787c49cda547c0d12e830383ab5ac",
+      "status": "VERIFIED"
     },
     "Riverbraid-GPG-Gold": {
-      "signature_hash": "901e9ebc2ce502e4032cc9a0ffa021c5be2654b202fbdc787b105846de735102"
+      "signature_hash": "d49c695fc20b38f7d607e1e92c144395c606c937c7f45e39ba172d73449c4988",
+      "status": "VERIFIED"
     },
     "Riverbraid-Harness-Gold": {
-      "signature_hash": "782328cf76050d1acedc53f366817ca027f8d0d06f814e2ba9dfaa088c117599"
+      "signature_hash": "7ff95be6d87b6d2a06479f12e315b5290fd1ec8a574ce464cd81436a198288c2",
+      "status": "VERIFIED"
     },
     "Riverbraid-Integration-Gold": {
-      "signature_hash": "0810401e261f379dc9da47ce4e25c628ebbb2003558a3051f121c99742c35f6a"
+      "signature_hash": "56f25a4c84d5ade0c116ea5440644df30080bcaaba72674e664429f962a6773b",
+      "status": "VERIFIED"
     },
     "Riverbraid-Interface-Gold": {
-      "signature_hash": "01f8b2b1a829217fb82973a5e8024e92baad823197f515c8488028781f1a558d"
+      "signature_hash": "f6fe2478c42736e62953d7769047e4e6c4611906eb807175c3d9f24e4c153440",
+      "status": "VERIFIED"
     },
     "Riverbraid-Judicial-Gold": {
-      "signature_hash": "42005ff927e1d87fed05087bd52d2b2068eab1533618c85b19d1d4155e92fb98"
+      "signature_hash": "29bbe76d1a37d963a2f6b68ec2218699a9880a7dfa0984c846b7a209e92a7eb4",
+      "status": "VERIFIED"
     },
     "Riverbraid-Manifest-Gold": {
-      "signature_hash": "f44866a90a71a29a770da891fc6d8ac9e74c722425309ec9b810ee9c3e52d4e7"
+      "signature_hash": "66847cee0b1c9b0541e92441784a635c4d3f2ec2fcdb99971bcfd6d029497bdc",
+      "status": "VERIFIED"
     },
     "Riverbraid-Memory-Gold": {
-      "signature_hash": "8c35cb749dffb4fef1782a8251feb7ffe68a35339ccbbe5e78f175670666a5fb"
+      "signature_hash": "a8977d836b48f0770e0d435f0268039e8c1c5efe95787430ec3b000c4195fa93",
+      "status": "VERIFIED"
     },
     "Riverbraid-Refusal-Gold": {
-      "signature_hash": "1c9e946969cddb40510a3c3fa5f9e91f46205adc2bb4e4fbb495114073bc7e4d"
+      "signature_hash": "5b42324de36c14d91d76f00f868d24536d790a056400935496daedff98fb5b7a",
+      "status": "VERIFIED"
     },
     "Riverbraid-Safety-Gold": {
-      "signature_hash": "8817aaffdacb0efa9e1c3c188b53b60701f112c2e4068da0203857a1f1971bdb"
+      "signature_hash": "3778dcf175edc941f28a6e27990f5220302d3093f1c18063edbbcca8c9a1764d",
+      "status": "VERIFIED"
     },
     "Riverbraid-Temporal-Gold": {
-      "signature_hash": "ee4d2fc2d3e2c57f15ca907f869f857fc719cc30c8927150ec6c004e59ad5161"
+      "signature_hash": "516491ab8470ad7fe56ed613e757ef263b634d8618317db9fb10d9481597a120",
+      "status": "VERIFIED"
     },
     "Riverbraid-Vision-Gold": {
-      "signature_hash": "c4eb23a7b33ebe73cf374e57086a4a3f354e7f31dfd614edc82c4df8efe990a8"
+      "signature_hash": "26029ed0faf15ac7c341865a6876a266911ec4c96323d273ad8635ba9f9db396",
+      "status": "VERIFIED"
     }
   }
 }

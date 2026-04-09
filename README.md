@@ -1,24 +1,17 @@
-# Riverbraid Manifest Gold
+<div align="center">
 
-Mathematically verifiable, fail-closed governance layer for AI systems.
+# O Riverbraid-Manifest-Gold
 
----
+### The Cluster Topology Map
 
-## 🛡️ Public Governance & Verification
+**The single source of truth for the Riverbraid v1.5.0 Genesis Cluster.**
 
-Riverbraid v1.5.0-Genesis is anchored and verifiable.
+</div>
 
-- **Live Verifier:** [https://riverbraid.github.io/Riverbraid-Manifest-Gold/verifier/](https://riverbraid.github.io/Riverbraid-Manifest-Gold/verifier/)
-- **Bitcoin Anchor:** [anchor.txt](https://riverbraid.github.io/Riverbraid-Manifest-Gold/anchor/anchor.txt)
-- **Sovereign Root:** `fa7475`
+## Governance
 
----
+This repository is governed by Riverbraid-Core v1.5.0. It contains the machine-readable index of every petal in the cluster.
 
-## 🚀 One-Command Quickstart
-
-\`\`\`bash
-node generate-swarm-manifest.cjs
-\`\`\`
-
-Produces:
-**FINAL_SWARM_ROOT: sha256:fa7475...**
+**Fingerprint:** D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4
+**Genesis Anchor:** de2062
+**Status:** Stationary
