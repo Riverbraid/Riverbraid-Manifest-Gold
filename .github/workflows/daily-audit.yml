@@ -5,7 +5,6 @@ on:
   workflow_dispatch:
 
 env:
-  # This kills the deprecation warning
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
@@ -16,15 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Path Diagnostic
-        run: |
-          echo "Workspace: $(pwd)"
-          ls -la verify-cluster.sh || (echo "CRITICAL: Script not found on remote" && exit 1)
-
+      
       - name: Run cluster verification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Use explicit bash interpreter to bypass execution bit issues
-          /bin/bash ./verify-cluster.sh
+          if [ -f "./verify-cluster.sh" ]; then
+            /bin/bash ./verify-cluster.sh
+          else
+            echo "CRITICAL ERROR: verify-cluster.sh not found."
+            exit 1
+          fi
