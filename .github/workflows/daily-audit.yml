@@ -1,27 +1,38 @@
 name: Daily Cluster Audit
 on:
-  workflow_dispatch: # Allows you to trigger this manually from the Actions tab
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+# Resolve Deprecation: Opt-in to Node 24 for the Runner
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
 
 jobs:
-  diagnostic:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Locate Verifier Script
+      - name: Debug Environment
         run: |
-          echo "--- Current Working Directory ---"
-          pwd
-          echo "--- Listing All Files Recursively ---"
-          find . -maxdepth 2 -not -path '*/.*'
-          echo "--- Checking Executable Bits ---"
-          ls -la verify-cluster.sh || echo "FILE NOT FOUND"
+          echo "--- Files in Root ---"
+          ls -F
+          echo "--- Shell Check ---"
+          which bash
 
-      - name: Attempt Execution (Direct)
+      - name: Run cluster verification
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Use bash explicitly to avoid Command Not Found (127)
+          # We check if the file exists first to avoid silent skips
           if [ -f "./verify-cluster.sh" ]; then
-            bash ./verify-cluster.sh
+            /bin/bash ./verify-cluster.sh
           else
-            echo "Skipping execution: File missing."
+            echo "CRITICAL ERROR: verify-cluster.sh not found in $(pwd)"
             exit 1
           fi
