@@ -13,14 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: List files for debugging
-        run: ls -la
+      - name: Debug Workspace
+        run: |
+          echo "Current Directory: $(pwd)"
+          ls -la
         
       - name: Run cluster verification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Force the executable bit again just in case
-          chmod +x ./verify-cluster.sh
-          # Execute explicitly with bash to avoid 127/interpreter issues
+          # Use bash explicitly to avoid 'Command Not Found' (127)
           /bin/bash ./verify-cluster.sh
