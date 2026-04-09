@@ -1,0 +1,13 @@
+name: Daily Cluster Audit
+on:
+  schedule:
+    - cron: '0 12 * * *'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run cluster verification
+        run: |
+          # This triggers the same logic as our local bash verifier
+          ./verify-cluster.sh
