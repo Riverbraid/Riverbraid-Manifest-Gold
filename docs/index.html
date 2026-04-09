@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riverbraid | Verifiable AI Governance</title>
+  <style>
+    body { font-family: monospace; background: #0e0e10; color: #f5f5f7; line-height: 1.6; padding: 40px; max-width: 800px; margin: auto; }
+    h1 { font-size: 1.5rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    code { background: #1a1a1d; padding: 2px 4px; color: #4cff88; }
+    .status { color: #4cff88; margin-bottom: 30px; }
+    .section { margin-top: 40px; }
+    a { color: #6aa9ff; text-decoration: none; }
+    .cta { display: inline-block; background: #fff; color: #000; padding: 10px 20px; font-weight: bold; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Riverbraid</h1>
+  <div class="status">✅ v1.5.0 Genesis Stationary & Anchored</div>
+  
+  <p>Mathematically verifiable fail closed governance for AI systems.</p>
+  
+  <div class="section">
+    <h3>The Protocol</h3>
+    <p>Riverbraid sits between any LLM and the execution environment. It converts policy into cryptographic proof. If the math does not match the system stops.</p>
+  </div>
+
+  <div class="section">
+    <h3>Quickstart</h3>
+    <code>node generate-manifest.cjs --recipe shield-openai</code><br>
+    <code>node shield-proxy.cjs --config shield-openai.json</code>
+  </div>
+
+  <div class="section">
+    <h3>Public Proof</h3>
+    <p>Sovereign Root: <code>fa7475</code></p>
+    <ul>
+      <li><a href="verifier/">Open Verifier Dashboard</a></li>
+      <li><a href="https://github.com/Riverbraid/Riverbraid-Manifest-Gold">GitHub Repository</a></li>
+    </ul>
+  </div>
+</body>
+</html>
