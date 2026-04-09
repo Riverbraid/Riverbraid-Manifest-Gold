@@ -1,11 +1,15 @@
 name: Daily Cluster Audit
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 12 * * *'
+  workflow_dispatch:
 
 env:
+  # This kills the deprecation warning
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
 
 jobs:
   audit:
@@ -13,14 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Path Audit
+      - name: Path Diagnostic
         run: |
-          echo "Current Path: $(pwd)"
-          ls -la verify-cluster.sh || echo "ERROR: SCRIPT STILL MISSING FROM REMOTE"
+          echo "Workspace: $(pwd)"
+          ls -la verify-cluster.sh || (echo "CRITICAL: Script not found on remote" && exit 1)
 
-      - name: Execute
+      - name: Run cluster verification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Use bash explicitly to bypass binary execution limits
+          # Use explicit bash interpreter to bypass execution bit issues
           /bin/bash ./verify-cluster.sh
