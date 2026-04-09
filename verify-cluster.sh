@@ -1,23 +1,27 @@
 #!/bin/bash
-# Riverbraid Cluster Sentinel v1.5.0
+# Riverbraid Cluster Sentinel v1.5.1 (Remote-First)
 TARGET_ROOT="01a777"
-PETALS=("Riverbraid-Action-Gold" "Riverbraid-Audio-Gold" "Riverbraid-Cognition" "Riverbraid-Core" "Riverbraid-Crypto-Gold" "Riverbraid-GPG-Gold" "Riverbraid-Golds" "Riverbraid-Harness-Gold" "Riverbraid-Integration-Gold" "Riverbraid-Interface-Gold" "Riverbraid-Judicial-Gold" "Riverbraid-Lite" "Riverbraid-Manifest-Gold" "Riverbraid-Memory-Gold" "Riverbraid-Refusal-Gold" "Riverbraid-Safety-Gold" "Riverbraid-Temporal-Gold" "Riverbraid-Vision-Gold")
+ORG="Riverbraid"
+PETALS=("Action-Gold" "Audio-Gold" "Cognition" "Core" "Crypto-Gold" "GPG-Gold" "Golds" "Harness-Gold" "Integration-Gold" "Interface-Gold" "Judicial-Gold" "Lite" "Manifest-Gold" "Memory-Gold" "Refusal-Gold" "Safety-Gold" "Temporal-Gold" "Vision-Gold")
 
 STATE_FILE=".audit_state"
 > $STATE_FILE
 
-echo "Checking $TARGET_ROOT integrity across ${#PETALS[@]} petals..."
+echo "Auditing $TARGET_ROOT integrity across ${#PETALS[@]} petals via GitHub API..."
 
-for repo in "${PETALS[@]}"; do
-  # In CI, we need to clone siblings if they aren't present
-  # But for a simple check against remote tags:
-  SHA=$(git ls-remote https://github.com/Riverbraid/$repo.git refs/tags/v1.5.0 | cut -f1)
+for petal in "${PETALS[@]}"; do
+  # Use gh CLI to get the tag SHA without cloning
+  REPO_NAME="Riverbraid-$petal"
+  # Adjusting for repos that don't follow the 'Riverbraid-' prefix if necessary
+  [[ "$petal" == "Riverbraid-"* ]] && REPO_NAME="$petal"
+  
+  SHA=$(gh api repos/$ORG/$REPO_NAME/git/ref/tags/v1.5.0 --template '{{.object.sha}}' 2>/dev/null)
   
   if [ -n "$SHA" ]; then
     echo "$SHA" >> $STATE_FILE
-    echo "  $repo: FOUND ($SHA)"
+    echo "  $REPO_NAME: VALID ($SHA)"
   else
-    echo "  $repo: MISSING v1.5.0 TAG"
+    echo "  $REPO_NAME: FAILED (Tag v1.5.0 not found or Unauthorized)"
     exit 1
   fi
 done

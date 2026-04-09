@@ -2,12 +2,16 @@ name: Daily Cluster Audit
 on:
   schedule:
     - cron: '0 12 * * *'
+  workflow_dispatch: # Allows manual re-run for testing
+
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run cluster verification
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # This triggers the same logic as our local bash verifier
+          chmod +x verify-cluster.sh
           ./verify-cluster.sh
