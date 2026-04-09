@@ -1,26 +1,27 @@
 name: Daily Cluster Audit
 on:
-  schedule:
-    - cron: '0 12 * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: read
+  workflow_dispatch: # Allows you to trigger this manually from the Actions tab
 
 jobs:
-  audit:
+  diagnostic:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Debug Workspace
+
+      - name: Locate Verifier Script
         run: |
-          echo "Current Directory: $(pwd)"
-          ls -la
-        
-      - name: Run cluster verification
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          echo "--- Current Working Directory ---"
+          pwd
+          echo "--- Listing All Files Recursively ---"
+          find . -maxdepth 2 -not -path '*/.*'
+          echo "--- Checking Executable Bits ---"
+          ls -la verify-cluster.sh || echo "FILE NOT FOUND"
+
+      - name: Attempt Execution (Direct)
         run: |
-          # Use bash explicitly to avoid 'Command Not Found' (127)
-          /bin/bash ./verify-cluster.sh
+          if [ -f "./verify-cluster.sh" ]; then
+            bash ./verify-cluster.sh
+          else
+            echo "Skipping execution: File missing."
+            exit 1
+          fi
