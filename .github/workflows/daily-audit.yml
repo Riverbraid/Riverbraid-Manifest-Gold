@@ -12,9 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: List files for debugging
+        run: ls -la
+        
       - name: Run cluster verification
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          chmod +x verify-cluster.sh
-          ./verify-cluster.sh
+          # Force the executable bit again just in case
+          chmod +x ./verify-cluster.sh
+          # Execute explicitly with bash to avoid 127/interpreter issues
+          /bin/bash ./verify-cluster.sh
