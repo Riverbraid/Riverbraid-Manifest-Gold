@@ -1,6 +1,7 @@
 {
   "name": "riverbraid-manifest-gold",
   "version": "1.5.0",
-  "dependencies": { "riverbraid-core": "file:../Riverbraid-Core" },
-  "scripts": { "verify": "node -e 'require(\"riverbraid-core\").verify()'" }
+  "scripts": {
+    "verify": "node run-vectors.cjs verify"
+  }
 }
