@@ -3,7 +3,7 @@
 > Status: STATIONARY
 
 ## Core Invariants
-- **Merkle Root:** 80c434
+- **Merkle Root:** b20e90
 - **GPG Fingerprint:** D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4
 - **Primary Branch:** main
 - **Primary Tag:** v1.5.0-genesis (Signed)
