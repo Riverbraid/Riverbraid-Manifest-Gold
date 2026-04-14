@@ -1,1 +1,20 @@
-{"name": "Riverbraid-Manifest-Gold", "version": "1.5.0", "root": "adef13", "fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4"}
+{
+  "Riverbraid-Action-Gold": "d035b1c3a5e1a4314d1919a66da43d6052f437b59c31d75a9f1cc00efa247bd8"
+ , "Riverbraid-Audio-Gold": "7d3baa3d3bf44b19fb9c505aa172da8bf77093fd18282c7aa94b48dda9b4d534"
+ , "Riverbraid-Cognition": "c2e9727734b03308d2ad1e7ef0d954443931a3a6185c28bb96d8762d5183487f"
+ , "Riverbraid-Core": "bc28e6da45487d8e58dc0e9719ebe078158d62d36fc8c6a4abbe65a683fc91da"
+ , "Riverbraid-Crypto-Gold": "9bdc38bce97553c6a2e0ae24adae10b0ee286fbccd88c24cec9156b682a40f5f"
+ , "Riverbraid-GPG-Gold": "5d08da19a6fd978d4f3833537365c1004d127c83a0cdcb8c685f844a45b51040"
+ , "Riverbraid-Golds": "2482a92ad9cd526729464be4b8fb55e1fabea4934b91fb0bcb177cf3d9defd16"
+ , "Riverbraid-Harness-Gold": "15e5cb235e0b1f0c41fdc19ec2b63e16650d2c8c23fa3582412ac8dbe1027582"
+ , "Riverbraid-Integration-Gold": "f2237f7e2580f136ccc74908eb44feb521bbd1455586d73ed037c51e461a8fff"
+ , "Riverbraid-Interface-Gold": "f812d64fd1726052be5919f49cba2faa92a3c7279ea5425e2c9a0dad59b0c333"
+ , "Riverbraid-Judicial-Gold": "26fd1c3829820f9105a2487096f0eaba2dac7e06969a6385d7822d1388b1be98"
+ , "Riverbraid-Lite": "adbc79088197ac2655654621675b6dcc947e6b32f1a5ee8ee0413b7b981a8c76"
+ , "Riverbraid-Memory-Gold": "c81ef2ef88900e91ff0c3977e15dad89b201cf43c5c8415b87c3494ec4929475"
+ , "Riverbraid-Prime": "379e9c7a6082001a839a741c369518a6667f833f4b2135fff863fc9e9fc9c7d9"
+ , "Riverbraid-Refusal-Gold": "2775fb6d6244ffe3ec230f5ab25931d808c46cad441aebcc384ee70cffa555c7"
+ , "Riverbraid-Safety-Gold": "d5a8b2145d1dff0a44534af801c250277dbe6bbab5c9361b76655e159df68e6c"
+ , "Riverbraid-Temporal-Gold": "b698fd37852432c6aba40a7e93285add59fcc05bba48390db075d6ca7e982eff"
+ , "Riverbraid-Vision-Gold": "5e826d4b28e6b528adc4a5d486a2c7556b2a69af489034cd950ee0b10fbb215f"
+}
