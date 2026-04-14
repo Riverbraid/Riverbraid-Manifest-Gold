@@ -8,7 +8,7 @@ ROOT="$1"
 OUTPUT_DIR="attestation"
 rm -rf "$OUTPUT_DIR" && mkdir -p "$OUTPUT_DIR"
 npm ls --json > "$OUTPUT_DIR/sbom.raw.json"
-node utils/canonical.js "$OUTPUT_DIR/sbom.raw.json" > "$OUTPUT_DIR/sbom.canonical.json"
+node utils/canonical.cjs "$OUTPUT_DIR/sbom.raw.json" > "$OUTPUT_DIR/sbom.canonical.cjson"
 cat > "$OUTPUT_DIR/build-provenance.json" <<EOP
 {
   "version": "1.5.0",
@@ -16,6 +16,6 @@ cat > "$OUTPUT_DIR/build-provenance.json" <<EOP
   "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 }
 EOP
-node utils/canonical.js "$OUTPUT_DIR/build-provenance.json" > "$OUTPUT_DIR/build-provenance.canonical.json"
-gpg --detach-sign --armor "$OUTPUT_DIR/build-provenance.canonical.json"
+node utils/canonical.cjs "$OUTPUT_DIR/build-provenance.json" > "$OUTPUT_DIR/build-provenance.canonical.cjson"
+gpg --detach-sign --armor "$OUTPUT_DIR/build-provenance.canonical.cjson"
 tar -czf riverbraid-v1.5.0-genesis-attestation.tar.gz "$OUTPUT_DIR"
