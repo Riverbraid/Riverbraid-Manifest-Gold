@@ -1,14 +1,26 @@
-name: Riverbraid Verification Gate
+name: verify
 on:
   push:
-    branches: [ main, genesis ]
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    env:
+      TZ: UTC
+      LC_ALL: C.UTF-8
+      LANG: C.UTF-8
+      NO_COLOR: "1"
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - run: npm ci --ignore-scripts || true
-      - run: npm run verify || echo "Verification command not found - skipping"
+          node-version: 20.11.0
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Verify
+        run: npm test
