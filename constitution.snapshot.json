@@ -1,4 +1,351 @@
 {
-  "verifier_integrity": "8ede02a61f51fcda4fa21fac54e6c4d09b40f184cc8df7ccad9af17561b5819d",
-  "repos": []
+  "version": "1.5.0",
+  "merkle_root": "3d46e338ab7d9af9055ebc8bb6584a8e3639a9fa5960f7d1f8674f1ae9751bd7",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "daf0f369b25356b2217989eebc4dad24f6681376a07e1a6ac2a8799a13b02bc6",
+      "leaf": "60c255621a965ddd35fecaccd4cf07b877e73287f6598867373259d17cbf8a8f"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "288e0dab960b2c5524e8794685ab49a1bd3e168abfed7358d66fab125fbdb566",
+      "leaf": "5342565d156c1947a82d4f9204e7b68f61cbaf2a2bb71b4a2f8c49d380a2eedf"
+    },
+    {
+      "path": ".stationary-seal",
+      "sha256": "df48de2fb69bb42f3fe91e56141328d2bcf6930ee35bdb15d9d3ebe6f8d5b04e",
+      "leaf": "d4e6e8c854bea2882873c14113aad59b837bbf4cc3e86b2e2302a4b1c79c7056"
+    },
+    {
+      "path": "anchor/anchor.txt",
+      "sha256": "9ade1b631775f08ffb34ea25a3a531a57765876217f13e72882cf2f328d58d7b",
+      "leaf": "d334cee145df014805d55561c1425562c3f538c838bef1113ddbf812c461a5a4"
+    },
+    {
+      "path": "anchor/anchor.txt.ots",
+      "sha256": "fde19e221b83824e4b63e34ca73a9c3aa2b2948dd862f5854ed9bf921d7d0d91",
+      "leaf": "8067110f5ddf18595072e8482534e0929695452dc9203a7a9fe5b7bac2885799"
+    },
+    {
+      "path": "attestation.json",
+      "sha256": "e606178c6ca986bc73b9a7431e012d70b2168ce6941034d085d88825013caa00",
+      "leaf": "e7c72ca04a40d3d4ace6e7d5f05d95d1128cdfe858cb6e6d7702afba238e4497"
+    },
+    {
+      "path": "attestation/build-provenance.canonical.cjson",
+      "sha256": "dabf6583e54ef5405e7efc79d9f100852df19ab3393a96cd2cd867fc2969aea1",
+      "leaf": "5887e89b57ecfd1f90fca63f7b1eafb7d085d4c579f239389e882b1e307b9f22"
+    },
+    {
+      "path": "attestation/build-provenance.canonical.cjson.asc",
+      "sha256": "bce447e3c0614e44411083beab0b609c8884d523359b140304bd9e951c595d55",
+      "leaf": "7bcb17eb618e172c44a3b9da1b9faf8c35a88d5e64ce551bc5e7eac50e19248d"
+    },
+    {
+      "path": "attestation/build-provenance.json",
+      "sha256": "7719acb75fc1a6ae0b77bd3c6fc16286c991ac9255bc93c8a9eabfcf06159ced",
+      "leaf": "50144d7201545d06c321a0a69a64198da346b59a72cd8d10ed38a3b8cbce4c62"
+    },
+    {
+      "path": "attestation/sbom.canonical.cjson",
+      "sha256": "9ce4a959dcc6662ef62707efa37d3cb21c9bab2a297470399a174ac43ae3e191",
+      "leaf": "5c4ef26f6dccf4e2092f2a62c687755eaefe4b486ace69bbabd3b764f75ef24c"
+    },
+    {
+      "path": "attestation/sbom.raw.json",
+      "sha256": "b2ba3d66032b3b0eb0a706e0afd7a20b2ab9e0100b4e9856efa4f23d690c6588",
+      "leaf": "93e8d8fe4b75990d69445ec4483fe4c7a9c0f2152cd32d22f647ac397bbc8997"
+    },
+    {
+      "path": "bin/dry-run-manifest.cjs",
+      "sha256": "91d2943f1b4bd7b5ec1495e5c358b8d35eb03b9bc1bc09d5db3ceb29ca5127e5",
+      "leaf": "bf3f53fe176c18f48fb59c9c2b4d1d42fef8d0d7ae26e6839b71754dbf9850c7"
+    },
+    {
+      "path": "bridge-protocol.cjs",
+      "sha256": "e6d51821109cfb86a277cfb3bf49deb5039faddd4afe95f3b82a5019dd1d026b",
+      "leaf": "625714c97970685191ed3391a2e9603cb5f43bd6e277846ee9a1b322f9f35ac7"
+    },
+    {
+      "path": "build-provenance.canonical.cjson",
+      "sha256": "6c7fa2c0436c5c11288fd6cffc0b96d6141555f35efed604afec4e7629bc50f5",
+      "leaf": "6be38f606e268ef2378961c0ea6d9cda8afbe2dcaabd7eb527f7631f1afc1465"
+    },
+    {
+      "path": "build-provenance.json",
+      "sha256": "363241fd42787e93263ef1c9883a9b0091dc907bf41cb4d1eee61341f83f51f5",
+      "leaf": "3c056d2b1b7c8cc10c8bcacb71d8b6fde0c823bc3995b32943ac23d26f7612bb"
+    },
+    {
+      "path": "CEREMONY.md",
+      "sha256": "b3d5dc4d6a7f28ea950b566545b53c6903913823ed9d2be519aae3ca86fabc13",
+      "leaf": "94f95aab6f8c84254e548b5247518c13e0bbc384881a80e0fd895ae41bb270a8"
+    },
+    {
+      "path": "CHALLENGE.md",
+      "sha256": "332d5e9845d9e21702b8ecece7f1a41ee26075c0ff5e4091769f69407e3b123d",
+      "leaf": "c07b37f5fd6d41eac429e3d5ce4ec07166f396943c38d639c62f95d811e96a88"
+    },
+    {
+      "path": "cluster-manifest.json",
+      "sha256": "53ff1558cd1c751926b9be5c7b78fac413df5c94d963d3f3dd8e874ba92d0abc",
+      "leaf": "33bec4296d76d3fa9fc8c9069e82cf87d810f244a46cb3e954f826d3c1789d98"
+    },
+    {
+      "path": "cluster-root.txt",
+      "sha256": "767c5a49d8643c5e6073f2d17087b3f3209b6679e10d0c19879234715f480fbe",
+      "leaf": "b5a4a41b1b5c1c30242ba9b56674b34e5c65b301b88141c63f0ce79ce2f28612"
+    },
+    {
+      "path": "COMPLIANCE-MAPPING.md",
+      "sha256": "46d817e61c98f4f21ba829ef017a5f832c707419c6753dae6fe9ca27a26ef930",
+      "leaf": "09ffc9c3c8896c0f6ddb2d165293dd7ea62730918a04d6180f2e6f407ed60dcf"
+    },
+    {
+      "path": "constitution.signature.json",
+      "sha256": "dea6c0e96c3ba6388913a8bccdd6d4d7e45802aedda78b3fb863563825a5e55a",
+      "leaf": "fc65021b365d7881640a01fa76559e563471810eaecfb419c48a6c8d31c7fddd"
+    },
+    {
+      "path": "constitution.snapshot.json.asc",
+      "sha256": "66847cee0b1c9b0541e92441784a635c4d3f2ec2fcdb99971bcfd6d029497bdc",
+      "leaf": "2e7314c1b771915143902f966fa1a5ae07e8dcc5d894217032213c7083cb8cc8"
+    },
+    {
+      "path": "constitution.threshold.json",
+      "sha256": "64c787487a94a10a4d9611d8265fe60364aff41af5a0f13a322120dc344899c7",
+      "leaf": "ea31a0c060bfdb0246d0fc812dee293b67aae0d51eebf5004d5849896fccdff0"
+    },
+    {
+      "path": "crypt-vault.cjs",
+      "sha256": "36b56e6aee8156285a7a109408b5d3c077bb0a2408e523f1745de33a2ad7a7d8",
+      "leaf": "08293c92b4e3c8b3ae0a5e9133e51fdcf39ed6f5e25ce0ef9febb4f6256e4847"
+    },
+    {
+      "path": "CRYPTO.md",
+      "sha256": "1d8490493d09bdb18ed1ce14c0193d26bbd9fbf496b3af4737a3633842503f78",
+      "leaf": "c43ef01f1bddd9375eec4ef0ed05d3d26199adb25446646fd869ed391d6049ef"
+    },
+    {
+      "path": "DEMO-SHIELD-OPENAI.md",
+      "sha256": "92aee46642c9587281546d23bd11e4aba63d68dd8b13b8b75a18248bb232dbfc",
+      "leaf": "dacbe5ad3156add03a7eb704457facc343f278369d6f7152aa8e1e07056c3882"
+    },
+    {
+      "path": "gatekeeper.cjs",
+      "sha256": "50478f1027bcb5986963bfae4aae448519f3277f3c0859a6f1e3d3723e61fdcd",
+      "leaf": "985d7820412ceb5f27f1a73b170c8da9df280a3038d561c466d039b1bbaae247"
+    },
+    {
+      "path": "generate-manifest.cjs",
+      "sha256": "5954b836456bd0be04daf5c2a412b438e018a37f3eb61a788b127a0c0852b1b3",
+      "leaf": "d5ddf86b1a8b5d709c8dc9715e25ac82a61873ef5470b5a5308e8d6c66c8e12e"
+    },
+    {
+      "path": "generate-swarm-manifest.cjs",
+      "sha256": "df967be152ee79d2224ca59995a902a70fb83a6fb89a841b4d482e0b0144e01d",
+      "leaf": "bcd1398e03eb57ed9daf30686cec0f5b6009a4c038d6ac0405559b9a6995a30c"
+    },
+    {
+      "path": "GENESIS.md",
+      "sha256": "4e8de6762cfd8e7d0419dc717382b957520a0977e7e0079a8e9489d091650ae4",
+      "leaf": "7f0abe6139bd7423d57a83632f67547817185b8f7c2a6ba32ece4cc4af0ab70e"
+    },
+    {
+      "path": "GPG-POLICY.md",
+      "sha256": "e93d0c0a1157e9f4a46daf954c74ed1d7d0441dba5bace0469b54e8d2a1a903a",
+      "leaf": "b4f108f58bf2adf307d383d4338bef6767c5614edab41a47bb6483d47e9306ae"
+    },
+    {
+      "path": "harness.cjs",
+      "sha256": "47c4397068062e505366a62b0a31d4746da2644bb665378cfbc050cc7ef70f5c",
+      "leaf": "45d84b2a2b4c88d980aa2094fe30c7249b0042c20d6ef6c8263764ae7cf4b79f"
+    },
+    {
+      "path": "identity-gold.cjs",
+      "sha256": "a9ed17c189b236415926a897868e90dd498ff4077bdada7b6d5232dc20793dfb",
+      "leaf": "d4fc594b702660c82728c671e19b6309a4111e12488c6705f4a0173319337321"
+    },
+    {
+      "path": "INSTRUCTIONS-FOR-AUDITOR.md",
+      "sha256": "2174b6dd61e1cd1ce36dc9c507cb7b9e75d85dacf0d0556ce33f0cb57e039a5c",
+      "leaf": "cd8024a5c91b9782cfe6e1ce29e3e9adad70029a8c57c39197b05b85d6535424"
+    },
+    {
+      "path": "integrity.sh",
+      "sha256": "9f44306953216ddb7dc704a66094177486681e308478b92586d5751de7be88ca",
+      "leaf": "cdf59954cf13d299fab58f293dc065a229dad1d87e996d98fb68d43277f12a87"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3c43d4165819a1a9f973bd0124e3d9cba76901529180c6941b7735a3315fc33d",
+      "leaf": "33378d29d0c58ee40d0adf65f719f194b8fdc4381756840af8e00acbbd07829c"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "8438e462201c4ed93d8d3771e2dbd882c0b999e37e661315b4e50224f19bd81f",
+      "leaf": "3101d07b6a8470326aaaf8c4968928016dc5e970e889c988b271b53b1dca0520"
+    },
+    {
+      "path": "MERKLE_ROOT",
+      "sha256": "b6152bd56ebbc177d9a86c9d20334639f3ea03ccea439f3757062c4b41745c60",
+      "leaf": "71632789aea6b1d2b260ceb1ac60c89310b9f7e9d80a91bf4bb1482731cdd9e7"
+    },
+    {
+      "path": "package.json",
+      "sha256": "fdd82885057006c9b8c462552f115e76755579c9c33fc5dd5dcda0bfce4905d5",
+      "leaf": "027b739d848846993b1d73a0c4523bd5de3dc0a364e48c26d532a0f72ad8aaea"
+    },
+    {
+      "path": "paradox-resolver.cjs",
+      "sha256": "0627559e13982a0c485e074314467bddf0deb997ef99ec080fae327449c86fa6",
+      "leaf": "4fac588d7dc846ba03d0d7e5cc70748de48f7e76a75bf90f4ce9339e75ff3bd2"
+    },
+    {
+      "path": "profiler.cjs",
+      "sha256": "3a56bb581642d0443b2c858bf010522782f921d4e05745187aa68e606f1affe5",
+      "leaf": "c152120b5b386ae4dfc7332386109deefa3acfc96355d571454f6b175f47600b"
+    },
+    {
+      "path": "proof-scaffold.cjs",
+      "sha256": "45f5e74da77694314f62ad9cc3590bfd2e973f25a31b695a4a3f5c60b40cd433",
+      "leaf": "d82097e1ca8be48430f92476f00c04a2500283decf35808ae419a105b2fbcb57"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f20d04d5eeb6dd6942ab55ae9f354e3674c90d4abe173244ca47282a3fa3f940",
+      "leaf": "cc79753a59081a33f79619f20270e9de50fe4a13a11d5014cbf6c841bdcbb234"
+    },
+    {
+      "path": "REBUILD-SCHEDULE.md",
+      "sha256": "b4542a34c775ba494aae1290397ccf42a80e62d528f5531cd49a129d63bc039d",
+      "leaf": "3e4d433055466585be85fda5a79311f25720d9620c632e1e07766eb19adb08d5"
+    },
+    {
+      "path": "refusal-engine.cjs",
+      "sha256": "8bd90c796cfd9ebd8b8f46ef13422a741c4f4c77ac531b62fabbd88dc64a4add",
+      "leaf": "aa1f298271da723da462047ce382231670b75fcf02cef56190370b1e1856feb3"
+    },
+    {
+      "path": "RIVERBRAID-SPEC.md",
+      "sha256": "470c9f3a7fccdf706d52f15a921a28b3e946d9d1acad8bc2181a9fdffe557d5e",
+      "leaf": "cde62f8260c93f8b86333da6ac9f60215c7711f50f075a80dc34a1015ef0d314"
+    },
+    {
+      "path": "riverbraid-v1.5.0-genesis-attestation.tar.gz",
+      "sha256": "44328b258b393fc24b479f8f59fa7228027e7e9129f1861ce6d3233c29ea10f5",
+      "leaf": "1f1cc003eedb48ccb2b8cbde6588b951535c9e71e5cf1416dbfe40f9bf449147"
+    },
+    {
+      "path": "run-vectors.cjs",
+      "sha256": "dacac55fa4846267c962d0e5a46d2ba3d81a40de7cd544cd25751407e788c818",
+      "leaf": "e448a8e65fd67fa0cbdbd24c67ce708edbf83bbd817e1ce9a5912f874e6e0458"
+    },
+    {
+      "path": "safety-gate.cjs",
+      "sha256": "dd51d5cd3afe43d9f508bfceb7dc3bf1475e89516ebf1a386d51d1bee083be9e",
+      "leaf": "cb7109253338d7484ecf2eaf8d9ffe781df3a70868742e9782f60b0d6e70db73"
+    },
+    {
+      "path": "sbom.canonical.cjson",
+      "sha256": "9ce4a959dcc6662ef62707efa37d3cb21c9bab2a297470399a174ac43ae3e191",
+      "leaf": "34d9f2d2731cfacca6ce2911221e8f0846909d2844113f47558130dee4107ccf"
+    },
+    {
+      "path": "sbom.raw.json",
+      "sha256": "b2ba3d66032b3b0eb0a706e0afd7a20b2ab9e0100b4e9856efa4f23d690c6588",
+      "leaf": "07f2359f61117c0e805f13a3320d73e6b8315a63a68bc95aea913d5962d3ab35"
+    },
+    {
+      "path": "scripts/anchor-root.sh",
+      "sha256": "d8650d43ac7d0d043d2fe50ae1db7c6061828adf2356315d0bd23515b6d357f9",
+      "leaf": "2d6fe9e35cdc52df196646f413d7b0e2f5311429a828c015d24b3f3048352c60"
+    },
+    {
+      "path": "scripts/generate-attestation.sh",
+      "sha256": "1252ed32800b2d2ca9dce2d3086b20f50e4b54989c74c47e36ac7d4a09e2e3cf",
+      "leaf": "8cb12627a3266f260684c9fb7197c43f5aa869b8e324ab6f2c87f91e48153659"
+    },
+    {
+      "path": "scripts/install-hooks.sh",
+      "sha256": "7d0538d0e95ebcdcbdc3388b4d9a9a3529d738a47874f6127e0dd56127ffe6fe",
+      "leaf": "d00d0de3056906cacd8ff21b694d999da3602a0c374909e588b0189e684448fa"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "e5b9e82de0305fb04235aa90d03538979403d11d44f64f5567ba6ee41784a62d",
+      "leaf": "1d7a5ff2dca6001e079406aa37d99e1784170c9567f57f3c6184a7feef67daa7"
+    },
+    {
+      "path": "semantic-bridge.json",
+      "sha256": "e49ee5bcf7d5f1eeb5ba971ce6543e778759b65c058d75645b17820b967008d6",
+      "leaf": "373eaef68562fa022e5b124b202cd4c71e54e6aabc26cedbf7a80d953f8fc0f1"
+    },
+    {
+      "path": "SHA256SUMS",
+      "sha256": "97b3a038adcbbad2774ba68ee476338bec0012b11d0067072b8439a08658c472",
+      "leaf": "dac2169692b38cf7cb17eb751c9583d952a2cf98c34c888c34c9a31363c2a95a"
+    },
+    {
+      "path": "SOVEREIGN-ENVIRONMENT.md",
+      "sha256": "539a240387a5a3bc098981bb2b0db3ef3e7266bb1460fc5ddbe444a30283dc52",
+      "leaf": "46a91be7e4cf4eaf6cfcb1430b1a87caae245c15e5c543f864b98c9e26646e5a"
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "e7196bc64b0c4599446c091f376cf9bda76f24ca02247df3739f54b373c9a5eb",
+      "leaf": "16a382bae999f7dd5758edfcf845e7018754dccb5327f351ade520ac56ac4d53"
+    },
+    {
+      "path": "src/runtime-binding.js",
+      "sha256": "0fbaf8e9d87c7721ee96677efd331efb4e37c1742d145ae41c04cc5d0fb72f08",
+      "leaf": "d3469ed11e232b3cbbd1fe873355fe52c7a7cf07aa6a9e0e84003cd13474a5af"
+    },
+    {
+      "path": "status.json",
+      "sha256": "fc2642c7c6b0b6913f50825d6ec099aa95d8e9984ae0d536b800e2593097fe69",
+      "leaf": "64882eddc253fbd46a96461f418d33f414594cf342c3d22e8116f98e5d0a35ae"
+    },
+    {
+      "path": "swarm_anchor.txt",
+      "sha256": "d2259d1e793b00dcef3bd9f29637a6bdc7dce6db3f48a63aa9d09d5ead69e9dc",
+      "leaf": "64d842a7484777d550e1456fdd2961d13cbdb48c2e1791eb8ff70d570754ef7e"
+    },
+    {
+      "path": "swarm.manifest.json",
+      "sha256": "a5804ad6e706154a5adc268d846c45f2bb7627c43794bd6ef5a5dd86ac085136",
+      "leaf": "e0bd372f69b70a0e543ee65e57e88c06b12eb56e988cf07d35438750f3009bbd"
+    },
+    {
+      "path": "temporal-bridge.cjs",
+      "sha256": "79a05febb750bd1e2d2e87c12019a9266c3ed39a0080c332ae45a4be6a44edbd",
+      "leaf": "b4f83a332aadba60d558ebfb851aa3b6dcf2cd56f5481b2926193b9f6e34a4ca"
+    },
+    {
+      "path": "TRUTH.md",
+      "sha256": "9b8e3bc8e76466e63aee5e345e89099ce20bbab21da3c0fe08e7f2442b4a0c3d",
+      "leaf": "e6c3bcf013f19e37ca41081c7fb41a852c1d1dcb86b6ad303eff234b5b47b842"
+    },
+    {
+      "path": "TRUTH.SEAL",
+      "sha256": "f9bd1487ad6cbbd0286c5091112497bb3f53711cc0e91a16641f11250551f152",
+      "leaf": "81e196c7180ea3ad04126f56a294bce331e35c7e4609d218ff355ec135d66697"
+    },
+    {
+      "path": "utils/canonical.cjs",
+      "sha256": "478a95944cc767eba79950b93583623e2af01a860267ba68b8582a99efb2575d",
+      "leaf": "4d246b0cf72de82bc5747ed5abc1da9622260c4d207d4d2503fdfa5cb21b5ba7"
+    },
+    {
+      "path": "verified-deployments.json",
+      "sha256": "72add216889bfc42f6f7ed603dba75258b2d465449ab1709b9984bc1b89c0a23",
+      "leaf": "331018097ee6455d8103d54bf86470303194c4fe4cf0262fdb44b131f2ea8c12"
+    },
+    {
+      "path": "verify-cluster.sh",
+      "sha256": "2bd8f57c9dbd3843bab578eb986b5e5e172f70df7570457e619eb28c37d31cc4",
+      "leaf": "b07c88f0b6cc47571359c2a27cbb0511093f9488753c21bafd8d5692df18ab76"
+    }
+  ]
 }
