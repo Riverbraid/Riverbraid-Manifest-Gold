@@ -1,5 +1,5 @@
-# Riverbraid-Manifest-Gold Specification
-- **The Coupling Test:** Pass (Stationary)
-- **Scale Separation Gate:** Active
-- **Tags:** #Linear #StationaryState
-- **Invariant:** Mechanical Honesty
+# Technical Specification
+- **The Coupling Test**: Passed
+- **Scale Separation Gate**: Active
+- **Tag**: Linear (Deterministic Execution)
+- **Stationary State Invariant**: de2062
