@@ -1,0 +1,14 @@
+{
+  "version": "1.5.0",
+  "merkle_root": "de20625f9b8c7d1e8ec84f6d8f86d9f4f2b083a4",
+  "governance": {
+    "type": "2-of-2",
+    "authorities": ["Primary", "Secondary"],
+    "enforcement": "Ed25519"
+  },
+  "signatures": {
+    "primary": null,
+    "secondary": null
+  },
+  "status": "pending_signature"
+}
