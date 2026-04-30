@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["riverbraid_manifest_version", "total_repos", "repositories"],
+  "properties": {
+    "riverbraid_manifest_version": { "type": "string" },
+    "total_repos": { "type": "integer", "const": 45 },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "state", "authority", "role"]
+      }
+    }
+  }
+}
