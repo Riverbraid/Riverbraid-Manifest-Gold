@@ -1,4 +1,4 @@
-{
+﻿{
     "canonical_floor":  [
                             "Riverbraid-Core",
                             "Riverbraid-Wasm-Bridge",
@@ -15,5 +15,8 @@
                    ],
     "parked":  [
 
-               ]
+               ],
+    "claim_boundary":  "reduced-floor-only",
+    "full_constellation_claimed":  false,
+    "canonical_floor_count":  5
 }
