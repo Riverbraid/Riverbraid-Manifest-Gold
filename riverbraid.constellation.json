@@ -1,0 +1,19 @@
+{
+    "canonical_floor":  [
+                            "Riverbraid-Core",
+                            "Riverbraid-Wasm-Bridge",
+                            "Riverbraid-Manifest-Gold",
+                            "Riverbraid-Golds",
+                            "Riverbraid-Lang"
+                        ],
+    "external_or_experimental":  [
+                                     "Riverbraid-Build-V5",
+                                     "Riverbraid-Hydra"
+                                 ],
+    "deprecated":  [
+                       "Riverbraid-Wasm-Bridge-Gold"
+                   ],
+    "parked":  [
+
+               ]
+}

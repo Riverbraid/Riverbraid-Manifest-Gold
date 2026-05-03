@@ -1,0 +1,7 @@
+﻿{
+    "version":  "1.0.0",
+    "name":  "riverbraid-manifest-gold",
+    "scripts":  {
+                    "test:riverbraid":  "node verify-vector.cjs"
+                }
+}
