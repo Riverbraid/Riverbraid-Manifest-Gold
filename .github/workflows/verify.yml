@@ -1,0 +1,13 @@
+name: Riverbraid Manifest Verification
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify-manifest:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify reduced floor manifest
+        run: |
+          test -f riverbraid.constellation.json
+          node -e 'const m = JSON.parse(require("fs").readFileSync("riverbraid.constellation.json", "utf8").replace(/^\uFEFF/, "")); if(m.canonical_floor_count !== 5) throw new Error("Floor mismatch");'
