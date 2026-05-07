@@ -1,0 +1,33 @@
+{
+  "schema": "riverbraid.gold.protocol.steps",
+  "version": "1.0.0",
+  "repo": "Riverbraid-Manifest-Gold",
+  "ring": 1,
+  "petal": "Manifest-Gold",
+  "invariant": "MANIFEST_STATIONARY",
+  "claim_boundary": "declared-conditions-only",
+  "canonical_input": {
+    "repo": "Riverbraid-Manifest-Gold",
+    "petal": "Manifest-Gold",
+    "ring": 1,
+    "invariant": "MANIFEST_STATIONARY"
+  },
+  "expected_result": true,
+  "steps": [
+    "receive canonical stationarity object",
+    "require repo to equal Riverbraid-Manifest-Gold",
+    "require petal to equal Manifest-Gold",
+    "require ring to equal 1",
+    "require invariant to equal MANIFEST_STATIONARY",
+    "emit deterministic verification output"
+  ],
+  "forbidden": [
+    "Date",
+    "Math.random",
+    "randomUUID",
+    "timestamps",
+    "absolute paths",
+    "environment dependent values",
+    "external lookups"
+  ]
+}

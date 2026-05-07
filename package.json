@@ -1,10 +1,17 @@
 {
-    "version":  "1.0.0",
-    "name":  "riverbraid-manifest-gold",
-    "scripts":  {
-                    "test:riverbraid":  "node verify-vector.cjs"
-                },
-    "riverbraid":  {
-                       "role":  "manifest"
-                   }
+  "version": "1.0.0",
+  "name": "@riverbraid/manifest-gold",
+  "scripts": {
+    "test:riverbraid": "node verify-vector.cjs",
+    "verify": "node verify.mjs",
+    "test": "node verify.mjs"
+  },
+  "riverbraid": {
+    "role": "manifest"
+  },
+  "private": true,
+  "type": "module",
+  "description": "Riverbraid Gold petal for deterministic stationarity verification.",
+  "main": "index.js",
+  "license": "MIT"
 }
